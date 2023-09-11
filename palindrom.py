@@ -7,3 +7,8 @@ def is_palindrome(origin: Union[str, int]) -> bool:
         if origin[i] != origin[length - 1 - i]:
             return False
     return  True
+result = is_palindrome(user_input)
+if result:
+    print(f"{user_input} - Is pal.")
+else:
+    print(f"{user_input} - Is not pal.")
