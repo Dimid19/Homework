@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 from typing import Union
 user_input = input("Add string and number: ")
 def is_palindrome(origin: Union[str, int]) -> bool:
-    origin = str(origin)
-    length = len(origin)
+    ignore_marks = ''.join(char.lower() for char in str(origin) if char.isalnum())
+    length = len(ignore_marks)
     for i in range(length // 2):
         if origin[i] != origin[length - 1 - i]:
             return False
@@ -14,7 +13,6 @@ if result:
 else:
     print(f"{user_input} - Is not pal.")
 
-    
 def get_longest_palindrome(origin: str) -> str:
     longest_palindrome = ""
 
@@ -29,5 +27,5 @@ input_str2 = "1012210"
 result1 = get_longest_palindrome(input_str1)
 result2 = get_longest_palindrome(input_str2)
 print("The longest palindrom for '0123219':", result1)
-print("THe longest palindrom for  '1012210':", result2
->>>>>>> get_longest_palindrome
+print("THe longest palindrom for  '1012210':", result2)
+
