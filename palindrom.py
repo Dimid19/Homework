@@ -2,11 +2,8 @@ from typing import Union
 user_input = input("Add string and number: ")
 def is_palindrome(origin: Union[str, int]) -> bool:
     ignore_marks = ''.join(char.lower() for char in str(origin) if char.isalnum())
-    length = len(ignore_marks)
-    for i in range(length // 2):
-        if origin[i] != origin[length - 1 - i]:
-            return False
-    return  True
+    print(ignore_marks)
+    return ignore_marks == ignore_marks[::-1]
 result = is_palindrome(user_input)
 if result:
     print(f"{user_input} - Is pal.")
