@@ -19,3 +19,13 @@ CREATE TABLE people
     name    VARCHAR(255) NOT NULL,
     birth_day DATE
 );
+--CREATE TABLE movie_people
+Create table movie_people
+(
+    PRIMARY KEY (movie_id, people_id)
+    movie_id INTEGER REFERENCES movie(id),
+    people_id INTEGER REFERENCES people(id),
+    name_personage    VARCHAR(255) NOT NULL,
+    director          VARCHAR(255) NOT NULL,
+    screenwriter      VARCHAR(255) NOT NULL
+);
